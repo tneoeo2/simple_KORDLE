@@ -17,7 +17,7 @@ const onKeyDownMoveEvent = (event) => {
 	const inputEl = document.querySelector(event.target.tagName);
 	
 	//backspace
-	if(event.KeyCode === 8){
+	if(event.keyCode === 8){
 		if(event.target.value.length !== event.target.maxLength   //입력값X 이전입력값있으면 이전요소 포커싱
 		&& event.target.previousElementSibling){
 		event.target.previousElementSibling.focus();
@@ -30,9 +30,9 @@ const onKeyDownMoveEvent = (event) => {
 function createInput(){
 	var template = `<div>
 	<input class='input' type= 'text' maxlength = '1'>
-	<input class='input' type= 'text' maxlength = '1' >
-	<input class='input' type= 'text' maxlength = '1' >
-	<input class='input' type= 'text' maxlength = '1' >
+	<input class='input' type= 'text' maxlength = '1' onkeydown = 'onKeyDownMoveEvent(event)'>
+	<input class='input' type= 'text' maxlength = '1' onkeydown = 'onKeyDownMoveEvent(event)'>
+	<input class='input' type= 'text' maxlength = '1' onkeydown = 'onKeyDownMoveEvent(event)'>
 	<input class='input' type= 'text' maxlength = '1' onkeydown = 'onKeyDownMoveEvent(event)';>
 	</div>`
 	

@@ -42,12 +42,32 @@
 			flex-direction:column;
 			text-align: center;
 		}
-		.keyboard_row{
+		.keyboard-row{
+			margin-top: .25em;
 			justify-content: center;
 		}
+
+		.keyboard button{tab-size: 4;
+		cursor: pointer;
+		user-select: none;
+		border: solid 1px gray;
+		border-radius: .25rem;
+		background-color: rgb(226 232 240/var(--tw-bg-opacity));
+		font-size: 1rem;
+		font-weight: 600;
+		width: 40px;
+		height: 40px;
+	}
+	#submit_btn{
+		width: 80px;
+	}
+	#del_btn{
+		width: 80px;
+
+	}
 		
 		</style>
-		<h1>KORDLE</h1>
+		<h1>s-KORDLE</h1>
 		<div id="main-box">
 			<button style="display: none;"> submit </button>
 		</div>
@@ -74,7 +94,7 @@
 				<button>ㅣ</button>
 			</div>
 			<div class="keyboard-row">
-				<button>입력</button>
+				<button id="submit_btn">입력</button>
 				<button>ㅋ</button>
 				<button>ㅌ</button>
 				<button>ㅊ</button>
@@ -82,7 +102,7 @@
 				<button>ㅠ</button>
 				<button>ㅜ</button>
 				<button>ㅡ</button>
-				<button>삭제</button>
+				<button id='del_btn'>삭제</button>
 			</div>
 		</div>
 		
